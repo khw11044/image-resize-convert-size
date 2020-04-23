@@ -1,0 +1,26 @@
+<annotation>
+	<folder>image</folder>
+	<filename>20200423_162206_080.jpg</filename>
+	<path>C:\Repos\resize\image\20200423_162206_080.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>800</width>
+		<height>600</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>Drone</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>316</xmin>
+			<ymin>330</ymin>
+			<xmax>608</xmax>
+			<ymax>407</ymax>
+		</bndbox>
+	</object>
+</annotation>
