@@ -4,9 +4,9 @@ import argparse
 
 def rescale_images(directory, size):
     for img in os.listdir(directory):
-        im = Image.open(directory+img)
+        im = Image.open(directory+'\\'+img)
         im_resized = im.resize(size, Image.ANTIALIAS)
-        im_resized.save(directory+img)
+        im_resized.save(directory+'\\'+img)
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description="Rescale images")
