@@ -1,5 +1,6 @@
 https://blog.naver.com/khw11044/222003896258
 블로그 자세한 설명
+
 for example :
 python resize.py -d image -s 800 600
 
