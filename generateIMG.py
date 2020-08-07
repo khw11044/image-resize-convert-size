@@ -14,13 +14,16 @@ from keras.preprocessing.image import ImageDataGenerator, array_to_img, img_to_a
 parser = argparse.ArgumentParser(description="generate images")
 parser.add_argument('-d', '--directory', type=str, required=True, help='Directory containing the images')
 parser.add_argument('-s', '--savedirectory', type=str, required=True, help='Directory savingthe images')
+parser.add_argument('-n', '--imagename', type=str, required=True, help='images name')
 args = parser.parse_args()
+imagesname = args.imagename 
 
  
 data_datagen = ImageDataGenerator(rescale=1./255)
+
  
 data_datagen = ImageDataGenerator(rescale=1./255,
-                                   rotation_range=30, 
+                                   rotation_range=10, 
                                    shear_range=5.5,  
                                    width_shift_range=0.1,
                                    height_shift_range=0.1,
@@ -48,7 +51,7 @@ for file_image in filename_in_dir:
  
     i = 0
  
-    for batch in data_datagen.flow(x,save_to_dir=savefilename, save_prefix='dronesa', save_format='jpg'):
+    for batch in data_datagen.flow(x,save_to_dir=savefilename, save_prefix=imagesname, save_format='jpg'):
         i += 1
-        if i > 3:
+        if i > 8:
             break
